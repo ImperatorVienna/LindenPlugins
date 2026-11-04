@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "id": "linden.document-parser",
+      "name": "文档解析器",
+      "description": "在本地解析 PDF、Word、Excel、PPT、纯文本与代码；Excel 保留公式和缓存值。",
+      "version": "0.0.0",
+      "target": "git+https://github.com/ImperatorVienna/LindenTechs.git#linden-ai/opencode-plugins/document-parser/latest"
+    }
+  ]
+}
