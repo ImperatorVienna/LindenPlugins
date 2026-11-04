@@ -12,6 +12,7 @@ var task = { type: "object", properties: { id }, required: ["id"], additionalPro
 var Documents = {
   id: "linden.documents",
   methods: {
+    info: { input: { type: "object", additionalProperties: false }, output: { type: "object", properties: { version: { type: "string" } }, required: ["version"] } },
     open: { input: { type: "object", properties: { id, name: id, inspection }, required: ["id", "name"], additionalProperties: false }, output: { type: "boolean" }, errors },
     append: { input: { type: "object", properties: { id, base64: { type: "string", maxLength: 1333336 } }, required: ["id", "base64"], additionalProperties: false }, output: { type: "boolean" }, errors },
     run: { input: task, output: result, errors },
@@ -136,7 +137,11 @@ var src_default = {
   id: "linden.document-parser",
   async setup(ctx) {
     const tasks = new Tasks;
+    const manifest = await Bun.file(new URL("./package.json", import.meta.url)).json().catch(() => ({ version: "development" }));
     const registration = await ctx.rpc.register(Documents, {
+      async info() {
+        return { version: manifest.version };
+      },
       async open(input, context) {
         try {
           return tasks.open(input);
