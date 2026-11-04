@@ -3,9 +3,17 @@
   "modules": [
     {
       "id": "linden.document-parser",
-      "name": "文档解析器",
-      "description": "在本地解析 PDF、Word、Excel、PPT、纯文本与代码；Excel 保留公式和缓存值。",
-      "version": "0.0.0",
+      "name": {
+        "en": "Document parser",
+        "zh": "文档解析器",
+        "zht": "文件解析器"
+      },
+      "description": {
+        "en": "Parse PDF, Word, Excel, PowerPoint, text and source files locally. Excel includes formulas and cached values.",
+        "zh": "在本地解析 PDF、Word、Excel、PPT、纯文本与代码；Excel 保留公式和缓存值。",
+        "zht": "在本機解析 PDF、Word、Excel、PPT、純文字與程式碼；Excel 保留公式與快取值。"
+      },
+      "version": "0.0.1",
       "target": "git+https://github.com/ImperatorVienna/LindenTechs.git#linden-ai/opencode-plugins/document-parser/latest"
     }
   ]
