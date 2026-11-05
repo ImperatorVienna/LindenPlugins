@@ -4,7 +4,7 @@
 
 ## 版本信息
 
-- 当前版本：0.0.1
+- 当前版本：1.0.0
 - 模组标识：`linden.local-speech`
 - 更新分支：`linden-ai/opencode-plugins/local-speech/latest`
 

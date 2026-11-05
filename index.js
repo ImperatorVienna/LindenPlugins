@@ -1,9 +1,9 @@
 // @bun
-// packages/linden-speech-plugin/src/index.ts
+// src/index.ts
 import { homedir } from "os";
 import path2 from "path";
 
-// node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/core.js
+// ../../node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/core.js
 var NEVER = Object.freeze({
   status: "aborted"
 });
@@ -70,7 +70,7 @@ function config(newConfig) {
     Object.assign(globalConfig, newConfig);
   return globalConfig;
 }
-// node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/util.js
+// ../../node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/util.js
 function getEnumValues(entries) {
   const numericValues = Object.values(entries).filter((v) => typeof v === "number");
   const values = Object.entries(entries).filter(([k, _]) => numericValues.indexOf(+k) === -1).map(([_, v]) => v);
@@ -443,7 +443,7 @@ function issue(...args) {
   return { ...iss };
 }
 
-// node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/errors.js
+// ../../node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/errors.js
 var initializer = (inst, def) => {
   inst.name = "$ZodError";
   Object.defineProperty(inst, "_zod", {
@@ -512,7 +512,7 @@ function formatError(error, _mapper) {
   return fieldErrors;
 }
 
-// node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/parse.js
+// ../../node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/parse.js
 var _parse = (_Err) => (schema, value, _ctx, _params) => {
   const ctx = _ctx ? Object.assign(_ctx, { async: false }) : { async: false };
   const result = schema._zod.run({ value, issues: [] }, ctx);
@@ -589,7 +589,7 @@ var _safeEncodeAsync = (_Err) => async (schema, value, _ctx) => {
 var _safeDecodeAsync = (_Err) => async (schema, value, _ctx) => {
   return _safeParseAsync(_Err)(schema, value, _ctx);
 };
-// node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/regexes.js
+// ../../node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/regexes.js
 var cuid = /^[cC][^\s-]{8,}$/;
 var cuid2 = /^[0-9a-z]+$/;
 var ulid = /^[0-9A-HJKMNP-TV-Za-hjkmnp-tv-z]{26}$/;
@@ -645,7 +645,7 @@ var number = /^-?\d+(?:\.\d+)?/;
 var lowercase = /^[^A-Z]*$/;
 var uppercase = /^[^a-z]*$/;
 
-// node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/checks.js
+// ../../node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/checks.js
 var $ZodCheck = /* @__PURE__ */ $constructor("$ZodCheck", (inst, def) => {
   var _a;
   inst._zod ?? (inst._zod = {});
@@ -1030,7 +1030,7 @@ var $ZodCheckOverwrite = /* @__PURE__ */ $constructor("$ZodCheckOverwrite", (ins
   };
 });
 
-// node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/doc.js
+// ../../node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/doc.js
 class Doc {
   constructor(args = []) {
     this.content = [];
@@ -1068,14 +1068,14 @@ class Doc {
   }
 }
 
-// node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/versions.js
+// ../../node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/versions.js
 var version = {
   major: 4,
   minor: 1,
   patch: 8
 };
 
-// node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/schemas.js
+// ../../node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/schemas.js
 var $ZodType = /* @__PURE__ */ $constructor("$ZodType", (inst, def) => {
   var _a;
   inst ?? (inst = {});
@@ -2417,7 +2417,7 @@ function handleRefineResult(result, payload, input, inst) {
     payload.issues.push(issue(_iss));
   }
 }
-// node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/registries.js
+// ../../node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/registries.js
 var $output = Symbol("ZodOutput");
 var $input = Symbol("ZodInput");
 
@@ -2468,7 +2468,7 @@ function registry() {
   return new $ZodRegistry;
 }
 var globalRegistry = /* @__PURE__ */ registry();
-// node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/api.js
+// ../../node_modules/.bun/zod@4.1.8/node_modules/zod/v4/core/api.js
 function _string(Class, params) {
   return new Class({
     type: "string",
@@ -2908,7 +2908,7 @@ function _check(fn, params) {
   ch._zod.check = fn;
   return ch;
 }
-// node_modules/.bun/zod@4.1.8/node_modules/zod/v4/classic/iso.js
+// ../../node_modules/.bun/zod@4.1.8/node_modules/zod/v4/classic/iso.js
 var ZodISODateTime = /* @__PURE__ */ $constructor("ZodISODateTime", (inst, def) => {
   $ZodISODateTime.init(inst, def);
   ZodStringFormat.init(inst, def);
@@ -2938,7 +2938,7 @@ function duration2(params) {
   return _isoDuration(ZodISODuration, params);
 }
 
-// node_modules/.bun/zod@4.1.8/node_modules/zod/v4/classic/errors.js
+// ../../node_modules/.bun/zod@4.1.8/node_modules/zod/v4/classic/errors.js
 var initializer2 = (inst, issues) => {
   $ZodError.init(inst, issues);
   inst.name = "ZodError";
@@ -2973,7 +2973,7 @@ var ZodRealError = $constructor("ZodError", initializer2, {
   Parent: Error
 });
 
-// node_modules/.bun/zod@4.1.8/node_modules/zod/v4/classic/parse.js
+// ../../node_modules/.bun/zod@4.1.8/node_modules/zod/v4/classic/parse.js
 var parse3 = /* @__PURE__ */ _parse(ZodRealError);
 var parseAsync2 = /* @__PURE__ */ _parseAsync(ZodRealError);
 var safeParse2 = /* @__PURE__ */ _safeParse(ZodRealError);
@@ -2987,7 +2987,7 @@ var safeDecode = /* @__PURE__ */ _safeDecode(ZodRealError);
 var safeEncodeAsync = /* @__PURE__ */ _safeEncodeAsync(ZodRealError);
 var safeDecodeAsync = /* @__PURE__ */ _safeDecodeAsync(ZodRealError);
 
-// node_modules/.bun/zod@4.1.8/node_modules/zod/v4/classic/schemas.js
+// ../../node_modules/.bun/zod@4.1.8/node_modules/zod/v4/classic/schemas.js
 var ZodType = /* @__PURE__ */ $constructor("ZodType", (inst, def) => {
   $ZodType.init(inst, def);
   inst.def = def;
@@ -3571,7 +3571,7 @@ function refine(fn, _params = {}) {
 function superRefine(fn) {
   return _superRefine(fn);
 }
-// packages/linden-modules/src/schema.ts
+// ../linden-modules/src/schema.ts
 var API_VERSION = 1;
 var MODULE_ID = "document-parser";
 var path = string2().max(200).regex(/^[a-zA-Z0-9_@.-]+(?:\/[a-zA-Z0-9_@.-]+)*$/).refine((v) => !v.split("/").some((x) => x === "." || x === ".."));
@@ -3592,7 +3592,7 @@ var manifestSchema = object({
 var envelopeSchema = object({ payload: string2().max(500000), keyId: string2().max(100), signature: string2().max(200) }).strict();
 var documentResultSchema = object({ text: string2().max(400000), warnings: array(string2().max(100)).max(20), pages: number2().int().positive().optional(), inspected: literal(true).optional() }).strict().refine((result) => result.inspected || result.text.length > 0);
 
-// packages/linden-modules/src/speech/catalog.ts
+// ../linden-modules/src/speech/catalog.ts
 var SPEECH_ID = "local-speech";
 var SPEECH_VERSION = "1.0.0";
 var SPEECH_MODELS = [
@@ -3600,7 +3600,7 @@ var SPEECH_MODELS = [
   { id: "turbo", file: "ggml-large-v3-turbo-q5_0.bin", size: 574041195, sha256: "394221709cd5ad1f40c46e6031ca61bce88931e6e088c188294c6d5a55ffa7e2", name: "Large-v3-Turbo Q5" }
 ];
 var SPEECH_REVISION = "5359861c739e955e79d9a303bcbc70fb988958b1";
-// packages/linden-modules/src/speech/adapter-package.ts
+// ../linden-modules/src/speech/adapter-package.ts
 var flag = string2().regex(/^--?[a-zA-Z][a-zA-Z0-9-]{0,40}$/);
 var adapterSchema = object({
   model: flag,
@@ -3610,16 +3610,16 @@ var adapterSchema = object({
   output: flag,
   flags: array(flag).max(8)
 }).strict();
-var BASE_ADAPTER = { model: "-m", audio: "-f", language: "-l", threads: "-t", output: "-of", flags: ["-nt", "-np", "-otxt"] };
+var BASE_ADAPTER = { model: "-m", audio: "-f", language: "-l", threads: "-t", output: "-of", flags: ["-nt", "-np", "-otxt", "-oj"] };
 var adapterPackageSchema = object({ id: literal("local-speech"), api: literal(1), version: string2().regex(/^\d+\.\d+\.\d+$/), sequence: number2().int().positive(), adapter: adapterSchema }).strict();
 var stateSchema = object({ highest: number2().int().positive(), active: envelopeSchema.optional(), previous: envelopeSchema.optional() }).strict();
 
-// packages/linden-modules/src/speech/runtime.ts
+// ../linden-modules/src/speech/runtime.ts
 import { createHash as createHash3 } from "crypto";
 import { mkdir as mkdir2, readFile as readFile3, writeFile as writeFile3, rename as rename2, rm as rm3, readdir } from "fs/promises";
 import { join as join3 } from "path";
 
-// packages/linden-modules/src/speech/upstream.ts
+// ../linden-modules/src/speech/upstream.ts
 var sha = string2().regex(/^[a-f0-9]{64}$/);
 var resourceSchema = object({ id: _enum(["small", "turbo"]), revision: string2().regex(/^[a-f0-9]{40}$/), sha256: sha, size: number2().int().positive().max(900000000) }).strict();
 var repositorySchema = object({ sha: string2().regex(/^[a-f0-9]{40}$/), siblings: array(object({ rfilename: string2(), lfs: object({ sha256: sha, size: number2().int().positive() }).optional() })) });
@@ -3665,13 +3665,14 @@ function newerVersion(next, current) {
   return i >= 0 && a[i] > b[i];
 }
 
-// packages/linden-modules/src/speech/adapter.ts
+// ../linden-modules/src/speech/adapter.ts
 import { readFile, writeFile, mkdtemp, rm } from "fs/promises";
 import { join } from "path";
 import { availableParallelism } from "os";
+var metadataSchema = object({ result: object({ language: string2().regex(/^[a-z]{2,3}$/) }) });
 var ENGINE_VERSION = "v1.9.5";
 var ENGINE_ADAPTER = "whisper-cli-v1";
-async function runSpeech(binary, model, audio, language, root, signal, timeout = 300000, adapter = BASE_ADAPTER) {
+async function runSpeech(binary, model, audio, language, root, signal, timeout = 300000, adapter = BASE_ADAPTER, onLanguage) {
   const directory = await mkdtemp(join(root, "job-"));
   try {
     const file = join(directory, "audio.wav");
@@ -3691,6 +3692,13 @@ async function runSpeech(binary, model, audio, language, root, signal, timeout =
     try {
       if (await child.exited !== 0 || signal.aborted)
         throw new Error("speech-inference");
+      if (adapter.flags.includes("-oj")) {
+        const metadata = await readFile(join(directory, "result.json"), "utf8").then((value) => metadataSchema.parse(JSON.parse(value))).catch(() => {
+          return;
+        });
+        if (metadata)
+          onLanguage?.(metadata.result.language);
+      }
       return (await readFile(join(directory, "result.txt"), "utf8")).trim();
     } finally {
       clearTimeout(timer);
@@ -3719,7 +3727,7 @@ async function probeSpeech(binary, model, root, signal, adapter = BASE_ADAPTER) 
   });
 }
 
-// packages/linden-modules/src/speech/download.ts
+// ../linden-modules/src/speech/download.ts
 import { createHash } from "crypto";
 async function downloadVerified(url, path, expected, signal, progress) {
   const response = await fetch(url, { signal: AbortSignal.any([signal, AbortSignal.timeout(30 * 60000)]) });
@@ -3748,12 +3756,12 @@ async function downloadVerified(url, path, expected, signal, progress) {
     throw new Error("speech-integrity");
 }
 
-// packages/linden-modules/src/speech/engine.ts
+// ../linden-modules/src/speech/engine.ts
 import { createHash as createHash2 } from "crypto";
 import { mkdir, readFile as readFile2, writeFile as writeFile2, rename, rm as rm2, access } from "fs/promises";
 import { join as join2 } from "path";
 
-// node_modules/.bun/fflate@0.8.3/node_modules/fflate/esm/index.mjs
+// ../../node_modules/.bun/fflate@0.8.3/node_modules/fflate/esm/index.mjs
 import { createRequire } from "module";
 var require2 = createRequire("/");
 var _a;
@@ -4162,7 +4170,7 @@ function unzipSync(data, opts) {
   return files;
 }
 
-// packages/linden-modules/src/speech/engine.ts
+// ../linden-modules/src/speech/engine.ts
 var manifest = object({ version: string2().regex(/^v\d+\.\d+\.\d+$/), files: record(string2().regex(/^[a-zA-Z0-9_.-]+\.(exe|dll)$/), string2().regex(/^[a-f0-9]{64}$/)) }).strict();
 function engineArchive(data) {
   let total = 0, count = 0;
@@ -4237,7 +4245,7 @@ async function speechEngine(root, bundled) {
   };
 }
 
-// packages/linden-modules/src/speech/runtime.ts
+// ../linden-modules/src/speech/runtime.ts
 var actionSchema = discriminatedUnion("action", [
   object({ action: _enum(["install", "select", "remove-model", "update-model"]), model: _enum(["small", "turbo"]).default("small") }).strict(),
   object({ action: _enum(["uninstall", "cancel-download", "check", "check-models", "check-engine", "update-engine", "reset-engine", "update", "rollback"]) }).strict()
@@ -4480,7 +4488,9 @@ async function speechModule(options) {
       }
       const task = (async () => {
         try {
-          job.text = await runSpeech(engine.binary(), model, input.data, input.language, root, controller.signal, 300000, BASE_ADAPTER);
+          job.text = await runSpeech(engine.binary(), model, input.data, input.language, root, controller.signal, 300000, BASE_ADAPTER, (language) => {
+            job.language = language;
+          });
           job.state = "complete";
         } catch {
           job.state = controller.signal.aborted ? "cancelled" : "failed";
@@ -4514,7 +4524,7 @@ async function speechModule(options) {
   };
 }
 
-// packages/linden-speech-plugin/src/index.ts
+// src/index.ts
 var code = (error) => error instanceof Error && /^speech-[a-z-]+$/.test(error.message) ? error.message : "speech-format";
 var json = (value) => JSON.parse(JSON.stringify(value));
 var object2 = { type: "object" };
