@@ -1,11 +1,48 @@
-# Linden local speech OpenCode plugin
+# 本地语音识别
 
-The plugin owns native whisper.cpp execution, model downloads and persisted resource state. OpenCode provides plugin installation, updates, removal, activation and RPC. The existing Linden recorder and audio preparation remain in the host; canonical mono 16 kHz PCM crosses `linden.speech` RPC. No legacy module manager is activated.
+通过 whisper.cpp 在本机将录音或音频转换为文字，为 Linden AI 的语音转文字功能提供识别能力。
 
-Build with `LINDEN_SPEECH_BINARY=/absolute/path/to/whisper-cli bun run build`. Supply a binary built for the current platform. The validated distribution currently contains Linux x64 only; other platforms require their own native build and verification. Models are downloaded from pinned official Hugging Face resources and verified before activation; they are not included in Git.
+## 版本信息
 
-Use `dist` as a built local import directory or publish its contents at the root of the `linden-ai/opencode-plugins/local-speech/latest` Git branch. The official catalog is maintained on the main branch. The plugin version is 0.0.1. This source change also requires an updated Linden client to expose speech RPC and the management panel.
+- 当前版本：0.0.1
+- 模组标识：`linden.local-speech`
+- 更新分支：`linden-ai/opencode-plugins/local-speech/latest`
 
-Resources live under the engine XDG data directory, `opencode/linden-plugin-resources/local-speech`. Plugin removal detaches the plugin and disables dependent applications; model resources remain available for reinstall. Delete individual resources through Manage before removal if desired. Engine disposal aborts active transcription and downloads.
+## 功能
 
-Validation: `bun test test/integration.test.ts` runs the actual compiled OpenCode engine, installs from an isolated Git repository, downloads the official 190 MB Small Q5 model, transcribes JFK audio, cancels active transcription and resource download, checks/installs an update, verifies model persistence, and removes the plugin. It uses temporary XDG directories and does not populate the user's production profile. Internet access and the built Linux engine/Whisper binaries are required. Browser visual checks use fixtures; live microphone capture is not exercised by this test.
+- 接收客户端准备的音频并在本机转写。
+- 下载、校验和管理语音模型资源。
+- 支持取消转写，完成后可在客户端编辑识别结果。
+
+## 运行要求
+
+需要支持 OpenCode 插件接口的 Linden AI 客户端。当前发布包包含 Linux x64 引擎；其他平台尚未发布对应引擎。首次下载语音模型需要网络连接。
+
+## 安装与更新
+
+在 Linden AI 的“模组管理 → Linden AI 模组”中安装。已安装后点击“检查更新”，有新版本时点击“更新”。
+
+本分支保存可直接加载的构建产物，由 OpenCode 插件接口负责下载安装和更新：
+
+```text
+git+https://github.com/ImperatorVienna/LindenTechs.git#linden-ai/opencode-plugins/local-speech/latest
+```
+
+## 使用方法
+
+安装后，进入“语音转文字”或点击对话中的麦克风，按界面提示下载并选择语音模型，再录音或选择音频。
+
+## 限制与说明
+
+- 语音模型不包含在 Git 包内，按需从固定的官方来源下载并校验。
+- 识别在本机执行，音频不会由本模组上传给云端模型。
+- 可解码的音频格式由客户端及系统决定。
+- 识别速度和内存占用取决于语音模型与设备性能。
+
+## 文件说明
+
+`index.js` 为插件程序；`native/linux-x64/` 为识别引擎；`package.json` 为包信息。
+
+## 许可证
+
+项目许可证见 [LICENSE](LICENSE)，引擎及模型许可证见 [LICENSE-whisper.cpp](LICENSE-whisper.cpp)、[LICENSE-whisper-models](LICENSE-whisper-models)，其他组件许可证见 [licenses/](licenses/)。
