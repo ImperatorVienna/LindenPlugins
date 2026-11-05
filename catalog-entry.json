@@ -3,6 +3,6 @@
   "icon": "microphone",
   "name": { "en": "Local speech recognition", "zh": "本地语音识别", "zht": "本機語音辨識" },
   "description": { "en": "Offline transcription with whisper.cpp. Audio stays on this device.", "zh": "通过 whisper.cpp 离线转写，音频始终留在本机。", "zht": "透過 whisper.cpp 離線轉寫，音訊始終留在本機。" },
-  "version": "0.0.1",
+  "version": "1.0.0",
   "target": "git+https://github.com/ImperatorVienna/LindenTechs.git#linden-ai/opencode-plugins/local-speech/latest"
 }
