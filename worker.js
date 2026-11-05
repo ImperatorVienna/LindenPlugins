@@ -45,7 +45,7 @@ var __esm = (fn, res, err) => () => {
 };
 var __require = import.meta.require;
 
-// packages/linden-documents/src/limits.ts
+// ../linden-documents/src/limits.ts
 function textBudget() {
   let text = "";
   return {
@@ -69,7 +69,7 @@ var init_limits = __esm(() => {
   };
 });
 
-// node_modules/.bun/pdfjs-dist@6.4.299/node_modules/pdfjs-dist/legacy/build/pdf.mjs
+// ../../node_modules/.bun/pdfjs-dist@6.4.299/node_modules/pdfjs-dist/legacy/build/pdf.mjs
 function __webpack_require__(moduleId) {
   const cachedModule = __webpack_module_cache__[moduleId];
   if (cachedModule !== undefined) {
@@ -32224,7 +32224,7 @@ var init_pdf = __esm(() => {
   };
 });
 
-// node_modules/.bun/pdfjs-dist@6.4.299/node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs
+// ../../node_modules/.bun/pdfjs-dist@6.4.299/node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs
 function __webpack_require__2(moduleId) {
   const cachedModule = __webpack_module_cache__2[moduleId];
   if (cachedModule !== undefined) {
@@ -99655,7 +99655,7 @@ var init_pdf_worker = __esm(() => {
   };
 });
 
-// packages/linden-documents/src/pdf-info.ts
+// ../linden-documents/src/pdf-info.ts
 async function pdfInfo(data, signal) {
   if (new TextDecoder().decode(data.subarray(0, 5)) !== "%PDF-")
     throw new Error("format");
@@ -99689,7 +99689,7 @@ async function pdfInfo(data, signal) {
   }
 }
 
-// node_modules/.bun/cfb@1.2.2/node_modules/cfb/cfb.js
+// ../../node_modules/.bun/cfb@1.2.2/node_modules/cfb/cfb.js
 var require_cfb = __commonJS(function(exports, module) {
   var Base64_map = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
   function Base64_encode(input) {
@@ -101805,7 +101805,7 @@ var require_cfb = __commonJS(function(exports, module) {
   }
 });
 
-// node_modules/.bun/xmlchars@2.2.0/node_modules/xmlchars/xml/1.0/ed5.js
+// ../../node_modules/.bun/xmlchars@2.2.0/node_modules/xmlchars/xml/1.0/ed5.js
 var require_ed5 = __commonJS(function(exports) {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.CHAR = `	
@@ -101843,7 +101843,7 @@ var require_ed5 = __commonJS(function(exports) {
   exports.isNameChar = isNameChar;
 });
 
-// node_modules/.bun/xmlchars@2.2.0/node_modules/xmlchars/xml/1.1/ed2.js
+// ../../node_modules/.bun/xmlchars@2.2.0/node_modules/xmlchars/xml/1.1/ed2.js
 var require_ed2 = __commonJS(function(exports) {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.CHAR = "\x01-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF";
@@ -101890,7 +101890,7 @@ var require_ed2 = __commonJS(function(exports) {
   exports.isNameChar = isNameChar;
 });
 
-// node_modules/.bun/xmlchars@2.2.0/node_modules/xmlchars/xmlns/1.0/ed3.js
+// ../../node_modules/.bun/xmlchars@2.2.0/node_modules/xmlchars/xmlns/1.0/ed3.js
 var require_ed3 = __commonJS(function(exports) {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.NC_NAME_START_CHAR = "A-Z_a-z\xC0-\xD6\xD8-\xF6\xF8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\uD800\uDC00-\uDB7F\uDFFF";
@@ -101908,7 +101908,7 @@ var require_ed3 = __commonJS(function(exports) {
   exports.isNCNameChar = isNCNameChar;
 });
 
-// node_modules/.bun/saxes@6.0.0/node_modules/saxes/saxes.js
+// ../../node_modules/.bun/saxes@6.0.0/node_modules/saxes/saxes.js
 var require_saxes = __commonJS(function(exports) {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.SaxesParser = exports.EVENTS = undefined;
@@ -103520,7 +103520,7 @@ var require_saxes = __commonJS(function(exports) {
   exports.SaxesParser = SaxesParser;
 });
 
-// packages/linden-documents/src/xml.ts
+// ../linden-documents/src/xml.ts
 function xml(value, onText, onOpen, onClose) {
   if (/<!DOCTYPE|<!ENTITY/i.test(value))
     reject("unsafe");
@@ -103547,7 +103547,7 @@ var init_xml = __esm(() => {
   import_saxes = __toESM(require_saxes(), 1);
 });
 
-// node_modules/.bun/fflate@0.8.3/node_modules/fflate/esm/index.mjs
+// ../../node_modules/.bun/fflate@0.8.3/node_modules/fflate/esm/index.mjs
 import { createRequire } from "module";
 function strFromU8(dat, latin1) {
   if (latin1) {
@@ -104076,7 +104076,7 @@ var init_esm = __esm(() => {
   }();
 });
 
-// packages/linden-documents/src/archive.ts
+// ../linden-documents/src/archive.ts
 function unzip(data) {
   const entries = new Map;
   const names = new Set;
@@ -104127,7 +104127,7 @@ var init_archive = __esm(() => {
   init_limits();
 });
 
-// packages/linden-documents/src/office.ts
+// ../linden-documents/src/office.ts
 function extractOffice(data, extension) {
   if ([208, 207, 17, 224, 161, 177, 26, 225].every((v, i) => data[i] === v)) {
     const compound = import_cfb.read(data, { type: "array" });
@@ -104267,7 +104267,7 @@ var init_office = __esm(() => {
   import_cfb = __toESM(require_cfb(), 1);
 });
 
-// node_modules/.bun/xlsx@.+vendor+xlsx-0.20.3.tgz+a0b0eade3c3b01c2/node_modules/xlsx/xlsx.mjs
+// ../../node_modules/.bun/xlsx@.+vendor+xlsx-0.20.3.tgz+a0b0eade3c3b01c2/node_modules/xlsx/xlsx.mjs
 function reset_ansi() {
   set_ansi(1252);
 }
@@ -128170,7 +128170,7 @@ EOD`;
   version = XLSX.version;
 });
 
-// packages/linden-documents/src/legacy.ts
+// ../linden-documents/src/legacy.ts
 async function extractLegacy(data, extension) {
   const signature = [208, 207, 17, 224, 161, 177, 26, 225];
   if (!signature.every((value, i) => data[i] === value))
@@ -128299,7 +128299,7 @@ var init_legacy = __esm(() => {
   import_cfb2 = __toESM(require_cfb(), 1);
 });
 
-// node_modules/.bun/regenerator-runtime@0.13.11/node_modules/regenerator-runtime/runtime.js
+// ../../node_modules/.bun/regenerator-runtime@0.13.11/node_modules/regenerator-runtime/runtime.js
 var require_runtime = __commonJS(function(exports, module) {
   var runtime = function(exports2) {
     var Op = Object.prototype;
@@ -128774,12 +128774,12 @@ var require_runtime = __commonJS(function(exports, module) {
   }
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/utils/getId.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/utils/getId.js
 var require_getId = __commonJS(function(exports, module) {
   module.exports = (prefix, cnt) => `${prefix}-${cnt}-${Math.random().toString(16).slice(3, 8)}`;
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/createJob.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/createJob.js
 var require_createJob = __commonJS(function(exports, module) {
   var getId = require_getId();
   var jobCounter = 0;
@@ -128801,7 +128801,7 @@ var require_createJob = __commonJS(function(exports, module) {
   };
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/utils/log.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/utils/log.js
 var require_log = __commonJS(function(exports) {
   var logging = false;
   exports.logging = logging;
@@ -128811,7 +128811,7 @@ var require_log = __commonJS(function(exports) {
   exports.log = (...args) => logging ? console.log.apply(exports, args) : null;
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/createScheduler.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/createScheduler.js
 var require_createScheduler = __commonJS(function(exports, module) {
   var createJob = require_createJob();
   var { log } = require_log();
@@ -128883,7 +128883,7 @@ var require_createScheduler = __commonJS(function(exports, module) {
   };
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/utils/getEnvironment.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/utils/getEnvironment.js
 var require_getEnvironment = __commonJS(function(exports, module) {
   module.exports = (key) => {
     const env = {};
@@ -128901,7 +128901,7 @@ var require_getEnvironment = __commonJS(function(exports, module) {
   };
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/utils/resolvePaths.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/utils/resolvePaths.js
 var require_resolvePaths = __commonJS(function(exports, module) {
   var isBrowser = require_getEnvironment()("type") === "browser";
   var resolveURL = isBrowser ? (s) => new URL(s, window.location.href).href : (s) => s;
@@ -128916,7 +128916,7 @@ var require_resolvePaths = __commonJS(function(exports, module) {
   };
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/constants/OEM.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/constants/OEM.js
 var require_OEM = __commonJS(function(exports, module) {
   module.exports = {
     TESSERACT_ONLY: 0,
@@ -128926,7 +128926,7 @@ var require_OEM = __commonJS(function(exports, module) {
   };
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/constants/defaultOptions.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/constants/defaultOptions.js
 var require_defaultOptions = __commonJS(function(exports, module) {
   module.exports = {
     workerBlobURL: true,
@@ -128934,7 +128934,7 @@ var require_defaultOptions = __commonJS(function(exports, module) {
   };
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/worker/node/defaultOptions.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/worker/node/defaultOptions.js
 var require_defaultOptions2 = __commonJS(function(exports, module) {
   var __dirname = "/home/qlan/Projects/linden-code/node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/worker/node";
   var path = __require("path");
@@ -128945,34 +128945,34 @@ var require_defaultOptions2 = __commonJS(function(exports, module) {
   };
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/worker/node/spawnWorker.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/worker/node/spawnWorker.js
 var require_spawnWorker = __commonJS(function(exports, module) {
   var { Worker: Worker2 } = __require("worker_threads");
   module.exports = ({ workerPath }) => new Worker2(workerPath);
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/worker/node/terminateWorker.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/worker/node/terminateWorker.js
 var require_terminateWorker = __commonJS(function(exports, module) {
   module.exports = (worker) => {
     worker.terminate();
   };
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/worker/node/onMessage.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/worker/node/onMessage.js
 var require_onMessage = __commonJS(function(exports, module) {
   module.exports = (worker, handler) => {
     worker.on("message", handler);
   };
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/worker/node/send.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/worker/node/send.js
 var require_send = __commonJS(function(exports, module) {
   module.exports = async (worker, packet) => {
     worker.postMessage(packet);
   };
 });
 
-// node_modules/.bun/is-url@1.2.4/node_modules/is-url/index.js
+// ../../node_modules/.bun/is-url@1.2.4/node_modules/is-url/index.js
 var require_is_url = __commonJS(function(exports, module) {
   module.exports = isUrl;
   var protocolAndDomainRE = /^(?:\w+:)?\/\/(\S+)$/;
@@ -128997,7 +128997,7 @@ var require_is_url = __commonJS(function(exports, module) {
   }
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/worker/node/loadImage.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/worker/node/loadImage.js
 var require_loadImage = __commonJS(function(exports, module) {
   var util = __require("util");
   var fs = __require("fs");
@@ -129025,7 +129025,7 @@ var require_loadImage = __commonJS(function(exports, module) {
   };
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/worker/node/index.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/worker/node/index.js
 var require_node = __commonJS(function(exports, module) {
   var defaultOptions = require_defaultOptions2();
   var spawnWorker = require_spawnWorker();
@@ -129043,7 +129043,7 @@ var require_node = __commonJS(function(exports, module) {
   };
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/createWorker.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/createWorker.js
 var require_createWorker = __commonJS(function(exports, module) {
   var resolvePaths = require_resolvePaths();
   var createJob = require_createJob();
@@ -129231,7 +129231,7 @@ var require_createWorker = __commonJS(function(exports, module) {
   };
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/Tesseract.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/Tesseract.js
 var require_Tesseract = __commonJS(function(exports, module) {
   var createWorker = require_createWorker();
   var recognize = async (image, langs, options) => {
@@ -129252,7 +129252,7 @@ var require_Tesseract = __commonJS(function(exports, module) {
   };
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/constants/languages.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/constants/languages.js
 var require_languages = __commonJS(function(exports, module) {
   module.exports = {
     AFR: "afr",
@@ -129360,7 +129360,7 @@ var require_languages = __commonJS(function(exports, module) {
   };
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/constants/PSM.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/constants/PSM.js
 var require_PSM = __commonJS(function(exports, module) {
   module.exports = {
     OSD_ONLY: "0",
@@ -129380,7 +129380,7 @@ var require_PSM = __commonJS(function(exports, module) {
   };
 });
 
-// node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/index.js
+// ../../node_modules/.bun/tesseract.js@7.0.0/node_modules/tesseract.js/src/index.js
 var require_src = __commonJS(function(exports, module) {
   require_runtime();
   var createScheduler = require_createScheduler();
@@ -129401,7 +129401,7 @@ var require_src = __commonJS(function(exports, module) {
   };
 });
 
-// packages/linden-documents/src/ocr.ts
+// ../linden-documents/src/ocr.ts
 async function createOcr(options) {
   if (!options.assetsUrl)
     reject("ocr-assets");
@@ -129445,7 +129445,7 @@ var init_ocr = __esm(() => {
   import_tesseract = __toESM(require_src(), 1);
 });
 
-// packages/linden-documents/src/pdf.ts
+// ../linden-documents/src/pdf.ts
 class LocalCanvasFactory {
   create(width, height) {
     if (width <= 0 || height <= 0 || width * height > PIXEL_LIMIT)
@@ -129569,7 +129569,7 @@ var init_pdf2 = __esm(() => {
   init_ocr();
 });
 
-// packages/linden-documents/src/text.ts
+// ../linden-documents/src/text.ts
 function extractText(data) {
   let text;
   try {
@@ -129589,10 +129589,10 @@ var init_text = __esm(() => {
   init_limits();
 });
 
-// packages/linden-document-plugin/src/worker.ts
+// src/worker.ts
 import path from "path";
 
-// packages/linden-documents/src/formats.ts
+// ../linden-documents/src/formats.ts
 init_limits();
 function documentFormat(name) {
   const extension = name.split(".").pop()?.toLowerCase() ?? "";
@@ -129607,7 +129607,7 @@ function documentFormat(name) {
   return reject("unsupported");
 }
 
-// packages/linden-documents/src/inspect.ts
+// ../linden-documents/src/inspect.ts
 init_limits();
 async function inspectDocument(name, data, pages, signal) {
   if (signal.aborted)
@@ -129633,7 +129633,7 @@ async function inspectDocument(name, data, pages, signal) {
   }
 }
 
-// packages/linden-documents/src/index.ts
+// ../linden-documents/src/index.ts
 init_limits();
 init_limits();
 init_office();
@@ -129659,7 +129659,7 @@ async function extractDocument(name, data, progress = () => {}, options = {}) {
   return extractText(data);
 }
 
-// packages/linden-document-plugin/src/worker.ts
+// src/worker.ts
 self.onmessage = async (event) => {
   try {
     const result = event.data.inspection ? await inspectDocument(event.data.name, event.data.data, event.data.inspection.pages, new AbortController().signal) : await extractDocument(event.data.name, event.data.data, (page, total) => {

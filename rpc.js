@@ -1,5 +1,5 @@
 // @bun
-// packages/linden-document-plugin/src/rpc.ts
+// src/rpc.ts
 var id = { type: "string", minLength: 1 };
 var inspection = { type: "object", properties: { pages: { type: "boolean" } }, required: ["pages"], additionalProperties: false };
 var result = { type: "object", properties: { text: { type: "string" }, warnings: { type: "array", items: { type: "string" } }, pages: { type: "number" }, inspected: { type: "boolean" } }, required: ["text", "warnings"] };

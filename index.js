@@ -1,9 +1,9 @@
 // @bun
-// packages/linden-document-plugin/src/index.ts
+// src/index.ts
 import { realpath } from "fs/promises";
 import path from "path";
 
-// packages/linden-document-plugin/src/rpc.ts
+// src/rpc.ts
 var id = { type: "string", minLength: 1 };
 var inspection = { type: "object", properties: { pages: { type: "boolean" } }, required: ["pages"], additionalProperties: false };
 var result = { type: "object", properties: { text: { type: "string" }, warnings: { type: "array", items: { type: "string" } }, pages: { type: "number" }, inspected: { type: "boolean" } }, required: ["text", "warnings"] };
@@ -30,10 +30,10 @@ var Documents = {
   events: {}
 };
 
-// packages/linden-documents/src/limits.ts
+// ../linden-documents/src/limits.ts
 var FILE_LIMIT = 50000000;
 
-// packages/linden-document-plugin/src/tasks.ts
+// src/tasks.ts
 class Tasks {
   active = new Map;
   uploads = new Map;
@@ -132,7 +132,7 @@ class Tasks {
   }
 }
 
-// packages/linden-document-plugin/src/index.ts
+// src/index.ts
 var src_default = {
   id: "linden.document-parser",
   async setup(ctx) {
