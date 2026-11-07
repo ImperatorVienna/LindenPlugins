@@ -32,6 +32,22 @@
       },
       "version": "1.0.0",
       "target": "git+https://github.com/ImperatorVienna/LindenPlugins.git#local-speech-recognition"
+    },
+    {
+      "id": "linden.memory-management-enhancement",
+      "icon": "memory",
+      "name": {
+        "en": "Memory management enhancement",
+        "zh": "记忆管理增强",
+        "zht": "記憶管理增強"
+      },
+      "description": {
+        "en": "Lets models that support tool calls save, update and delete your long-term memories. Manage them in Memory management.",
+        "zh": "让支持工具调用的模型保存、修改和删除你的长期记忆，可在“记忆管理”中查看和管理。",
+        "zht": "讓支援工具呼叫的模型儲存、修改和刪除你的長期記憶，可在「記憶管理」中檢視和管理。"
+      },
+      "version": "1.0.0",
+      "target": "git+https://github.com/ImperatorVienna/LindenPlugins.git#memory-management-enhancement"
     }
   ]
 }
