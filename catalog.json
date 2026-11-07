@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "id": "linden.document-parser",
+      "name": {
+        "en": "Document parser",
+        "zh": "文档解析器",
+        "zht": "文件解析器"
+      },
+      "description": {
+        "en": "Parse PDF, Word, Excel, PowerPoint, text and source files locally. Excel includes formulas and cached values.",
+        "zh": "在本地解析 PDF、Word、Excel、PPT、纯文本与代码；Excel 保留公式和缓存值。",
+        "zht": "在本機解析 PDF、Word、Excel、PPT、純文字與程式碼；Excel 保留公式與快取值。"
+      },
+      "version": "1.0.0",
+      "target": "git+https://github.com/ImperatorVienna/LindenPlugins.git#document-parser",
+      "icon": "document"
+    },
+    {
+      "id": "linden.local-speech",
+      "icon": "microphone",
+      "name": {
+        "en": "Local speech recognition",
+        "zh": "本地语音识别",
+        "zht": "本機語音辨識"
+      },
+      "description": {
+        "en": "Offline transcription with whisper.cpp. Audio stays on this device.",
+        "zh": "通过 whisper.cpp 离线转写，音频始终留在本机。",
+        "zht": "透過 whisper.cpp 離線轉寫，音訊始終留在本機。"
+      },
+      "version": "1.0.0",
+      "target": "git+https://github.com/ImperatorVienna/LindenPlugins.git#local-speech-recognition"
+    }
+  ]
+}
