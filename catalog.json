@@ -13,12 +13,12 @@
         "zh": "在本地解析 PDF、Word、Excel、PPT、纯文本与代码；Excel 保留公式和缓存值。",
         "zht": "在本機解析 PDF、Word、Excel、PPT、純文字與程式碼；Excel 保留公式與快取值。"
       },
-      "version": "1.0.0",
+      "version": "1.0.1",
       "target": "git+https://github.com/ImperatorVienna/LindenPlugins.git#document-parser",
       "icon": "document"
     },
     {
-      "id": "linden.local-speech",
+      "id": "linden.local-speech-recognition",
       "icon": "microphone",
       "name": {
         "en": "Local speech recognition",
@@ -30,7 +30,7 @@
         "zh": "通过 whisper.cpp 离线转写，音频始终留在本机。",
         "zht": "透過 whisper.cpp 離線轉寫，音訊始終留在本機。"
       },
-      "version": "1.0.0",
+      "version": "1.0.1",
       "target": "git+https://github.com/ImperatorVienna/LindenPlugins.git#local-speech-recognition"
     }
   ]
