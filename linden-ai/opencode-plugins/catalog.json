@@ -31,7 +31,7 @@
         "zht": "透過 whisper.cpp 離線轉寫，音訊始終留在本機。"
       },
       "version": "1.0.0",
-      "target": "git+https://github.com/ImperatorVienna/LindenTechs.git#linden-ai/opencode-plugins/local-speech/latest"
+      "target": "git+https://github.com/ImperatorVienna/LindenTechs.git#linden-ai/opencode-plugins/local-speech-recognition/latest"
     }
   ]
 }
