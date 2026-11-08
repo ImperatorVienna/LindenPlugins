@@ -48,6 +48,22 @@
       },
       "version": "1.0.0",
       "target": "git+https://github.com/ImperatorVienna/LindenPlugins.git#memory-management-enhancement"
+    },
+    {
+      "id": "linden.image-viewer",
+      "icon": "image",
+      "name": {
+        "en": "Image viewer",
+        "zh": "图片查看器",
+        "zht": "圖片檢視器"
+      },
+      "description": {
+        "en": "Saves generated images and shows image thumbnails and full-size views in conversations. Required by Image generation.",
+        "zh": "保存生成的图片，并在对话中显示图片缩略图和大图。是“图片生成”服务的前置模组。",
+        "zht": "儲存產生的圖片，並在對話中顯示圖片縮圖和大圖。是「圖片生成」服務的前置模組。"
+      },
+      "version": "1.0.0",
+      "target": "git+https://github.com/ImperatorVienna/LindenPlugins.git#image-viewer"
     }
   ]
 }
