@@ -12,10 +12,9 @@ var WORK_FOLDER = "generated-images";
 var extensions = { "image/png": "png", "image/jpeg": "jpg", "image/webp": "webp" };
 function imageFiles(options) {
   async function defaultFolder() {
-    const dirs = await readFile(path.join(options.configHome ?? path.join(options.home, ".config"), "user-dirs.dirs"), "utf8").catch(() => "");
-    const match = dirs.match(/^XDG_PICTURES_DIR="([^"]+)"/m)?.[1];
-    const pictures = match ? match.replace(/^\$HOME/, options.home) : path.join(options.home, "Pictures");
-    return path.join(pictures, "Linden AI");
+    if (!options.pictures)
+      throw new Error("image-viewer-client-required");
+    return path.join(options.pictures, "Linden AI");
   }
   async function custom() {
     const value = await Bun.file(options.settingsFile).json().catch(() => ({}));
@@ -95,11 +94,9 @@ var definition = { id: "linden.images", events: {}, methods: {
   read: { input: { ...object, properties: { path: { type: "string", minLength: 1, maxLength: 4096 } }, required: ["path"], additionalProperties: false }, output: object, errors }
 } };
 var src_default = { id: "linden.image-viewer", async setup(ctx) {
-  const home = homedir();
   const store = imageFiles({
-    home,
-    configHome: process.env.XDG_CONFIG_HOME,
-    settingsFile: path2.join(process.env.XDG_DATA_HOME ?? path2.join(home, ".local/share"), "opencode", "linden-plugin-resources", "image-viewer.json")
+    pictures: process.env.LINDEN_PICTURES_DIRECTORY,
+    settingsFile: path2.join(process.env.XDG_DATA_HOME ?? path2.join(homedir(), ".local/share"), "opencode", "linden-plugin-resources", "image-viewer.json")
   });
   const registration = await ctx.rpc.register(definition, {
     async settings(input, context) {
