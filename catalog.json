@@ -64,6 +64,22 @@
       },
       "version": "1.0.0",
       "target": "git+https://github.com/ImperatorVienna/LindenPlugins.git#image-viewer"
+    },
+    {
+      "id": "linden.context-compaction-enhancement",
+      "icon": "compaction",
+      "name": {
+        "en": "Context compaction enhancement",
+        "zh": "上下文压缩增强",
+        "zht": "上下文壓縮增強"
+      },
+      "description": {
+        "en": "Choose the cloud or local model that writes context compaction summaries, and never lose earlier messages when compacting.",
+        "zh": "选择写上下文压缩摘要的云端或本地模型，压缩时不会丢弃较早的对话。",
+        "zht": "選擇寫上下文壓縮摘要的雲端或本機模型，壓縮時不會捨棄較早的對話。"
+      },
+      "version": "1.0.0",
+      "target": "git+https://github.com/ImperatorVienna/LindenPlugins.git#context-compaction-enhancement"
     }
   ]
 }
