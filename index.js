@@ -323,7 +323,7 @@ var src_default = { id: "linden.context-compaction-enhancement", async setup(ctx
       return;
     const chosen = await model();
     const pinned = !conversation || chosen === "conversation" || retry === "conversation" ? undefined : describe(conversation.providerID, chosen) ?? null;
-    const text = transcript([...input.system.map((part) => ({ role: "system", content: [{ type: "text", text: part.text }] })), ...input.messages]);
+    const text = transcript(input.messages);
     const planned = planCompaction({
       needed: estimateTokens(text),
       pinned,
