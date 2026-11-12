@@ -1,5 +1,6 @@
 // @bun
 // src/index.ts
+import { rename as rename3 } from "fs/promises";
 import { homedir } from "os";
 import path2 from "path";
 
@@ -4260,7 +4261,7 @@ function speechWave(value) {
   return { data, language: input.language };
 }
 async function speechModule(options) {
-  const root = join3(options.storage, SPEECH_ID);
+  const root = options.storage;
   await mkdir2(root, { recursive: true });
   for (const name of await readdir(root)) {
     if (/^job-[a-zA-Z0-9]+$/.test(name) || name.endsWith(".partial") || name === "engine-staging")
@@ -4542,7 +4543,9 @@ var users = 0;
 var src_default = { id: "linden.local-speech-recognition", async setup(ctx) {
   const manifest = await Bun.file(new URL("./package.json", import.meta.url)).json().catch(() => ({ version: "development" }));
   users++;
-  const storage = path2.join(process.env.XDG_DATA_HOME ?? path2.join(homedir(), ".local/share"), "opencode", "linden-plugin-resources");
+  const resources = path2.join(process.env.XDG_DATA_HOME ?? path2.join(homedir(), ".local/share"), "opencode", "linden-plugin-resources");
+  const storage = path2.join(resources, "linden.local-speech-recognition");
+  await rename3(path2.join(resources, "local-speech"), storage).catch(() => {});
   const binary = path2.join(import.meta.dir, "native", `${process.platform}-${process.arch}`, process.platform === "win32" ? "whisper-cli.exe" : "whisper-cli");
   shared ??= speechModule({ storage, binary });
   let runtime;
