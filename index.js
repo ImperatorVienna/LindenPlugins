@@ -1,5 +1,6 @@
 // @bun
 // src/index.ts
+import { rename as rename2 } from "fs/promises";
 import { homedir } from "os";
 import path from "path";
 
@@ -245,7 +246,9 @@ var src_default = { id: "linden.context-compaction-enhancement", async setup(ctx
     return isLocalModel(value) ? value : "off";
   };
   users++;
-  const storage = path.join(process.env.XDG_DATA_HOME ?? path.join(homedir(), ".local/share"), "opencode", "linden-plugin-resources", "context-compaction");
+  const resources = path.join(process.env.XDG_DATA_HOME ?? path.join(homedir(), ".local/share"), "opencode", "linden-plugin-resources");
+  const storage = path.join(resources, "linden.context-compaction-enhancement");
+  await rename2(path.join(resources, "context-compaction"), storage).catch(() => {});
   const binary = path.join(import.meta.dir, "native", `${process.platform}-${process.arch}`, process.platform === "win32" ? "llama-server.exe" : "llama-server");
   shared ??= localEngine({ storage, binary, installed: async (installed) => {
     await ctx.storage.set("local", installed);
