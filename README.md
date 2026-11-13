@@ -4,7 +4,7 @@
 
 ## 版本信息
 
-- 当前版本：1.0.2
+- 当前版本：1.0.3
 - 模组标识：`linden.context-compaction-enhancement`
 - 更新分支：`context-compaction-enhancement`
 
