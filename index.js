@@ -1,6 +1,5 @@
 // @bun
 // src/index.ts
-import { mkdir as mkdir2, rename } from "fs/promises";
 import { homedir } from "os";
 import path2 from "path";
 
@@ -97,10 +96,6 @@ var definition = { id: "linden.images", events: {}, methods: {
 var src_default = { id: "linden.image-viewer", async setup(ctx) {
   const resources = path2.join(process.env.XDG_DATA_HOME ?? path2.join(homedir(), ".local/share"), "opencode", "linden-plugin-resources");
   const settingsFile = path2.join(resources, "linden.image-viewer", "settings.json");
-  if (!await Bun.file(settingsFile).exists()) {
-    await mkdir2(path2.dirname(settingsFile), { recursive: true });
-    await rename(path2.join(resources, "image-viewer.json"), settingsFile).catch(() => {});
-  }
   const store = imageFiles({ pictures: process.env.LINDEN_PICTURES_DIRECTORY, settingsFile });
   const registration = await ctx.rpc.register(definition, {
     async settings(input, context) {
