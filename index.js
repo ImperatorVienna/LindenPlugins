@@ -1,6 +1,5 @@
 // @bun
 // src/index.ts
-import { rename as rename3 } from "fs/promises";
 import { homedir } from "os";
 import path2 from "path";
 
@@ -4545,7 +4544,6 @@ var src_default = { id: "linden.local-speech-recognition", async setup(ctx) {
   users++;
   const resources = path2.join(process.env.XDG_DATA_HOME ?? path2.join(homedir(), ".local/share"), "opencode", "linden-plugin-resources");
   const storage = path2.join(resources, "linden.local-speech-recognition");
-  await rename3(path2.join(resources, "local-speech"), storage).catch(() => {});
   const binary = path2.join(import.meta.dir, "native", `${process.platform}-${process.arch}`, process.platform === "win32" ? "whisper-cli.exe" : "whisper-cli");
   shared ??= speechModule({ storage, binary });
   let runtime;

@@ -4,7 +4,7 @@
 
 ## 版本信息
 
-- 当前版本：1.0.1
+- 当前版本：1.0.2
 - 模组标识：`linden.local-speech-recognition`
 - 更新分支：`local-speech-recognition`
 
