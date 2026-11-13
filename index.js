@@ -5736,7 +5736,7 @@ var memoryInput = discriminatedUnion("action", [
   object({ action: literal("update"), id: string2().min(1).max(64), title: string2().optional(), text: string2() }).strict(),
   object({ action: literal("remove"), id: string2().min(1).max(64) }).strict()
 ]);
-var memoryLimits = { title: 40, text: 500, items: 50 };
+var memoryLimits = { title: 40, text: 500, items: 200 };
 function memoryDirectory(env = process.env) {
   return join(env.XDG_CONFIG_HOME ?? join(env.HOME ?? homedir(), ".config"), "opencode");
 }

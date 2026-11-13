@@ -4,7 +4,7 @@
 
 ## 版本信息
 
-- 当前版本：1.0.0
+- 当前版本：1.0.1
 - 模组标识：`linden.memory-management-enhancement`
 - 更新分支：`memory-management-enhancement`
 
@@ -33,7 +33,7 @@ git+https://github.com/ImperatorVienna/LindenPlugins.git#memory-management-enhan
 ## 限制与说明
 
 - 仅支持全局记忆，适用于所有聊天和工作；暂不区分工作项目。
-- 每条标题最多 40 字、正文最多 500 字，最多 50 条；超出时拒绝保存并提示原因。
+- 每条标题最多 40 字、正文最多 500 字，最多 200 条；超出时拒绝保存并提示原因。
 - 记忆保存在本机 OpenCode 配置目录，不上传云端；但会随请求发送给当前使用的模型服务商，请勿保存密码、密钥等敏感信息。
 - 默认放行时模型会直接保存，工作模式选择“询问”审批时才弹出确认。
 
